@@ -111,6 +111,15 @@
         }
       }
     </style>
+    <script>
+      function sendMessage() {
+        const urlParams = new URLSearchParams(window.location.search);
+        console.log(urlParams)
+        const number = urlParams.get('number');
+        console.log(number)
+        document.getElementById('select').innerHTML = number;
+      }
+    </script>
   </head>
   <body>
     <h2>Customize your Gift</h2>
@@ -120,7 +129,7 @@
           <form action="/action_page.php">
             <div class="row">
               <div class="col-50">
-                <h3>Please select a card</h3>
+                <h3 id="select">Please SELECT a card</h3>
                 <div class="icon-container">
                   <img
                     height="175px"
@@ -223,9 +232,14 @@
                 </div>
               </div>
             </div>
-            <a href="https://wa.me/+27746250000?text=paid"
-              ><input value="Pay Now" routerLink="review" class="btn"
-            /></a>
+            <!-- <a href="https://wa.me/+27746250000?text=paid"> -->
+            <input
+              onclick="sendMessage()"
+              value="Pay Now"
+              routerLink="review"
+              class="btn"
+            />
+            <!--</a> -->
           </form>
         </div>
       </div>
