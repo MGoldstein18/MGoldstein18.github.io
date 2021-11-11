@@ -119,48 +119,50 @@
       console.log(number);
       const occasion = urlParams.get('occasion');
 
-      if (occasion === 'Birthday') {
-        document.getElementById('pic#0').src =
-          'https://images.unsplash.com/photo-1605104602628-4ef9ec5c1da4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=776&q=80';
-        document.getElementById('pic#1').src =
-          'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80';
-        document.getElementById('pic#2').src =
-          'https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80';
-        document.getElementById('pic#3').src =
-          'https://images.unsplash.com/photo-1558636508-e0db3814bd1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGFwcHklMjBiaXJ0aGRheXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-      }
+      function loadFunction() {
+        if (occasion === 'Birthday') {
+          document.getElementById('pic#0').src =
+            'https://images.unsplash.com/photo-1605104602628-4ef9ec5c1da4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=776&q=80';
+          document.getElementById('pic#1').src =
+            'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80';
+          document.getElementById('pic#2').src =
+            'https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80';
+          document.getElementById('pic#3').src =
+            'https://images.unsplash.com/photo-1558636508-e0db3814bd1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGFwcHklMjBiaXJ0aGRheXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+        }
 
-      if (occasion === 'Thank you') {
-        document.getElementById('pic#0').src =
-          'https://images.unsplash.com/photo-1586810165511-781c734b6b0c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHRoYW5rJTIweW91fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-        document.getElementById('pic#1').src =
-          'https://images.unsplash.com/photo-1557395120-d48fc38063d6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRoYW5rJTIweW91fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-        document.getElementById('pic#2').src =
-          'https://images.unsplash.com/photo-1554830072-52d78d0d4c18?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGhhbmslMjB5b3V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-        document.getElementById('pic#3').src =
-          'https://images.unsplash.com/photo-1608389168343-ba8aa0cb3a63?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGhhbmslMjB5b3V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-      }
+        if (occasion === 'Thank you') {
+          document.getElementById('pic#0').src =
+            'https://images.unsplash.com/photo-1586810165511-781c734b6b0c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHRoYW5rJTIweW91fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+          document.getElementById('pic#1').src =
+            'https://images.unsplash.com/photo-1557395120-d48fc38063d6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRoYW5rJTIweW91fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+          document.getElementById('pic#2').src =
+            'https://images.unsplash.com/photo-1554830072-52d78d0d4c18?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGhhbmslMjB5b3V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+          document.getElementById('pic#3').src =
+            'https://images.unsplash.com/photo-1608389168343-ba8aa0cb3a63?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGhhbmslMjB5b3V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+        }
 
-      if (occasion === 'Well Done') {
-        document.getElementById('pic#0').src =
-          'https://images.unsplash.com/photo-1531686264889-56fdcabd163f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZ3JhdHVsYXRpb25zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-        document.getElementById('pic#1').src =
-          'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2VsbCUyMGRvbmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-        document.getElementById('pic#2').src =
-          'https://images.unsplash.com/photo-1528191070801-d45063d66e17?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdlbGwlMjBkb25lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-        document.getElementById('pic#3').src =
-          'https://images.unsplash.com/photo-1503876466-1fc5143eda57?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dGhpbmtpbmclMjBvZiUyMHlvdXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-      }
+        if (occasion === 'Well Done') {
+          document.getElementById('pic#0').src =
+            'https://images.unsplash.com/photo-1531686264889-56fdcabd163f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZ3JhdHVsYXRpb25zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+          document.getElementById('pic#1').src =
+            'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2VsbCUyMGRvbmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+          document.getElementById('pic#2').src =
+            'https://images.unsplash.com/photo-1528191070801-d45063d66e17?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdlbGwlMjBkb25lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+          document.getElementById('pic#3').src =
+            'https://images.unsplash.com/photo-1503876466-1fc5143eda57?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dGhpbmtpbmclMjBvZiUyMHlvdXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+        }
 
-      if (occasion === 'Other Occasion') {
-        document.getElementById('pic#0').src =
-          'https://images.unsplash.com/photo-1562776930-f2a2492c9c8f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGxvdmUlMjB5b3V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-        document.getElementById('pic#1').src =
-          'https://images.unsplash.com/photo-1513241435-32ad40a8577f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bG92ZSUyMHlvdXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-        document.getElementById('pic#2').src =
-          'https://images.unsplash.com/photo-1594066521341-330a79387ec3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uZ3JhdHVsYXRpb25zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
-        document.getElementById('pic#3').src =
-          'https://images.unsplash.com/photo-1507652955-f3dcef5a3be5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhpbmtpbmclMjBvZiUyMHlvdXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+        if (occasion === 'Other Occasion') {
+          document.getElementById('pic#0').src =
+            'https://images.unsplash.com/photo-1562776930-f2a2492c9c8f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGxvdmUlMjB5b3V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+          document.getElementById('pic#1').src =
+            'https://images.unsplash.com/photo-1513241435-32ad40a8577f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bG92ZSUyMHlvdXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+          document.getElementById('pic#2').src =
+            'https://images.unsplash.com/photo-1594066521341-330a79387ec3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29uZ3JhdHVsYXRpb25zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+          document.getElementById('pic#3').src =
+            'https://images.unsplash.com/photo-1507652955-f3dcef5a3be5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhpbmtpbmclMjBvZiUyMHlvdXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
+        }
       }
 
       let selectedPicture;
@@ -217,7 +219,7 @@
       }
     </script>
   </head>
-  <body>
+  <body onload="loadFunction()">
     <h2>Customize your Gift</h2>
     <div class="row">
       <div class="col-75">
