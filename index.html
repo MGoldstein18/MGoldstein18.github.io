@@ -120,22 +120,44 @@
       //   const number = urlParams.get('number');
       //   console.log(number)
       // }
-      function postCall() {
+      async function postCall() {
         console.log('called');
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const number = urlParams.get('number');
+        console.log(number);
         const url =
           'https://99h7m0xonl.execute-api.eu-central-1.amazonaws.com/dev/flow/message';
-
-        $.ajax({
-          type: 'POST',
-          url,
-          dataType: 'json',
+        const data = {
+          reference: '1514883137',
+          messageContext: 'gBGGJ3ImRHAPAglDLuZWS201DR8',
+          from: { number, name: 'payment page' },
+          to: { number: '0027746250000' },
+          message: {
+            text: 'paid'
+          },
+          groupings: ['', '', ''],
+          time: new Date().toISOString(),
+          timeUtc: new Date().toUTCString(),
+          channel: 'WhatsApp'
+        };
+        console.log(data)
+        await fetch(url, {
+          method: 'POST',
           headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
             Authorization: `eyJraWQiOiI4MFF6dlhRNVdYQ0tvdHJyM0tORnFlakxHVjVKOTVEbGU3S2lkQTNJV05nPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiMmFPOGZyUURmbFh4bDBFb0RHcnpTUSIsInN1YiI6IjJmZGI2MzQ1LTUxY2MtNGJhYS05MDY5LWE2ZmM5OWFiZTkwZiIsImN1c3RvbTpPYmplY3RJRCI6IjM2OWVmOWI0LWFiNzAtNGIzMS04ODdjLTMxMDg2ZjRhYjM0MyIsImNvZ25pdG86Z3JvdXBzIjpbImV1LWNlbnRyYWwtMV9xdmt3UWsyQmpfT2ZmaWNlMzY1Il0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmV1LWNlbnRyYWwtMS5hbWF6b25hd3MuY29tXC9ldS1jZW50cmFsLTFfcXZrd1FrMkJqIiwiY29nbml0bzp1c2VybmFtZSI6Ik9mZmljZTM2NV9mN215S053bVBDMldkZFZJSjFDY3ZHNXlaU1l2ZmJhNktFZDVvd2R1NC1RIiwibm9uY2UiOiJ3aWl3V09UVG1uVWp5b0t1dEIzTDRVbFpDYld1dlFSdjA3a2xRQl9HU2pNWks0V0Q1b3lDc3hRREhNNzNBSDg2bWdXYTF1VkVQaHlHTWVSanhaMnI0cnpkc1lFTnM1VXJtWTFjUkNQWXdGYTAyN1ZTb29GSmRVNzR6X2xYQW1kazlZdF9seU5DMGdwME5ua1RJZHBvb19nLU9MR1JfY1hDY3I0VHVwVFU3b3MiLCJhdWQiOiI2cW9pcWJsbWxlMmQxMXVvamNiYnF0MnRzciIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6ImY3bXlLTndtUEMyV2RkVklKMUNjdkc1eVpTWXZmYmE2S0VkNW93ZHU0LVEiLCJwcm92aWRlck5hbWUiOiJPZmZpY2UzNjUiLCJwcm92aWRlclR5cGUiOiJTQU1MIiwiaXNzdWVyIjoiaHR0cHM6XC9cL3N0cy53aW5kb3dzLm5ldFwvOWUzYjk4ZDYtOWQzZS00YzNmLWFjNjUtYTg2NWZiOGE0OTk0XC8iLCJwcmltYXJ5IjoidHJ1ZSIsImRhdGVDcmVhdGVkIjoiMTYyMTUxOTEyMjc0OCJ9XSwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2MjYyNjMyMjcsImV4cCI6MTYyNjI2NjgyNywiaWF0IjoxNjI2MjYzMjI3LCJlbWFpbCI6Im5vc2lAc3RlbGxyLW5ldC5jb20ifQ.TzIUXOXwK20R8oAAsXn5iCfMQi5aLmCDpGnao7tpYpq8OSCD9wYL6QjrV6npqn1JOEhouNguFZ-4_2SNVFrBQua5sF83VSHYjdowNm_b7qdc7qKUZl0-7qy8sW6XvBaKJXUSAf4ev68yUtEkl8e1FbEwra2kzP-nayZZQMW39ZA8EgqF7HbtzA1WHjqbqJIGQP_ossV8Sozg_pRKCNxHVxZF0ZEHTxGIYB52qyQgt9eK53s-B94j5AyG7INQVa2i2wC8ZieRiQ6HquYnvPz-C_jBXjs-TVy0J3nUnd6wVLkbHTt8ml8sMAHGcwR6Ad2qg_0iYXuGNlTyYC4W5YUtrA`
           },
-          success: function (result) {
-            console.log(result);
-          }
-        });
+          mode: 'no-cors',
+          body: JSON.stringify(data)
+        })
+          .then((data) => {
+            console.log('Success:', data);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
       }
     </script>
   </head>
