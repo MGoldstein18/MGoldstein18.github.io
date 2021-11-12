@@ -74,17 +74,18 @@
       }
 
       /* Container holding the image and the text */
-      .container {
+      .img-container {
         position: relative;
         text-align: center;
         color: white;
       }
 
       /* Bottom right text */
-      .bottom-right {
+      .centered {
         position: absolute;
-        bottom: 8px;
-        right: 16px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
       .btn {
@@ -247,7 +248,7 @@
               <div class="col-50">
                 <h3 id="select">Please select a card</h3>
                 <div class="icon-container">
-                  <div class="container">
+                  <div class="img-container">
                     <img
                       onclick="selectPicture('pic#0')"
                       id="pic#0"
@@ -256,7 +257,7 @@
                       width="175px"
                       src=""
                     />
-                    <div class="bottom-right">Thank you Test</div>
+                    <div class="centered">Centered image text test</div>
                   </div>
 
                   <img
