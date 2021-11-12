@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html>
+<htm prefix="og: https://ogp.me/ns#" l>
+  <title>Gift Voucher Payment</title>
+  <meta property="og:title" content="Gift Voucher Payment" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mgoldstein18.github.io/" />
+  <meta
+    property="og:image"
+    content="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2lmdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+  />
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -122,10 +130,11 @@
         urlParams = new URLSearchParams(window.location.search);
         number = urlParams.get('number');
         occasion = urlParams.get('occasion');
-        console.log("occasion", occasion)
-        console.log("number", number)
+        console.log('occasion', occasion);
+        console.log('number', number);
         if (occasion === 'Birthday') {
-          document.getElementById("messageInput").placeholder = "Happy Birthday!"
+          document.getElementById('messageInput').placeholder =
+            'Happy Birthday!';
           document.getElementById('pic#0').src =
             'https://images.unsplash.com/photo-1605104602628-4ef9ec5c1da4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=776&q=80';
           document.getElementById('pic#1').src =
@@ -137,7 +146,7 @@
         }
 
         if (occasion === 'Thank') {
-          document.getElementById("messageInput").placeholder = "Thank you!"
+          document.getElementById('messageInput').placeholder = 'Thank you!';
           document.getElementById('pic#0').src =
             'https://images.unsplash.com/photo-1586810165511-781c734b6b0c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHRoYW5rJTIweW91fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
           document.getElementById('pic#1').src =
@@ -149,7 +158,7 @@
         }
 
         if (occasion === 'Well') {
-          document.getElementById("messageInput").placeholder = "Well Done!"
+          document.getElementById('messageInput').placeholder = 'Well Done!';
           document.getElementById('pic#0').src =
             'https://images.unsplash.com/photo-1531686264889-56fdcabd163f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZ3JhdHVsYXRpb25zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
           document.getElementById('pic#1').src =
@@ -161,7 +170,8 @@
         }
 
         if (occasion === 'Other') {
-          document.getElementById("messageInput").placeholder = "Write your message here..."
+          document.getElementById('messageInput').placeholder =
+            'Write your message here...';
           document.getElementById('pic#0').src =
             'https://images.unsplash.com/photo-1562776930-f2a2492c9c8f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGxvdmUlMjB5b3V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
           document.getElementById('pic#1').src =
@@ -237,14 +247,14 @@
               <div class="col-50">
                 <h3 id="select">Please select a card</h3>
                 <div class="icon-container">
-                    <img
-                      onclick="selectPicture('pic#0')"
-                      id="pic#0"
-                      style="border: 1px solid #000000"
-                      height="175px"
-                      width="175px"
-                      src=""
-                    />
+                  <img
+                    onclick="selectPicture('pic#0')"
+                    id="pic#0"
+                    style="border: 1px solid #000000"
+                    height="175px"
+                    width="175px"
+                    src=""
+                  />
 
                   <img
                     onclick="selectPicture('pic#1')"
@@ -351,7 +361,7 @@
               </div>
             </div>
           </form>
-          <button id="myButton" onclick="postCall()">Pay Now</button>
+          <button class="btn" id="myButton" onclick="postCall()">Pay Now</button>
         </div>
       </div>
       <div class="col-25">
@@ -373,4 +383,4 @@
       </div>
     </div>
   </body>
-</html>
+</htm>
