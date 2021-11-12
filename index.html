@@ -138,6 +138,7 @@
         console.log("occasion", occasion)
         console.log("number", number)
         if (occasion === 'Birthday') {
+          document.getElementById("messageInput").placeholder = "Happy Birthday!"
           document.getElementById('pic#0').src =
             'https://images.unsplash.com/photo-1605104602628-4ef9ec5c1da4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=776&q=80';
           document.getElementById('pic#1').src =
@@ -149,6 +150,7 @@
         }
 
         if (occasion === 'Thank') {
+          document.getElementById("messageInput").placeholder = "Thank you!"
           document.getElementById('pic#0').src =
             'https://images.unsplash.com/photo-1586810165511-781c734b6b0c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHRoYW5rJTIweW91fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
           document.getElementById('pic#1').src =
@@ -160,6 +162,7 @@
         }
 
         if (occasion === 'Well') {
+          document.getElementById("messageInput").placeholder = "Well Done!"
           document.getElementById('pic#0').src =
             'https://images.unsplash.com/photo-1531686264889-56fdcabd163f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZ3JhdHVsYXRpb25zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
           document.getElementById('pic#1').src =
@@ -171,6 +174,7 @@
         }
 
         if (occasion === 'Other') {
+          document.getElementById("messageInput").placeholder = "Write your message here..."
           document.getElementById('pic#0').src =
             'https://images.unsplash.com/photo-1562776930-f2a2492c9c8f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGxvdmUlMjB5b3V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60';
           document.getElementById('pic#1').src =
@@ -287,9 +291,9 @@
                 <h3>Please write a message</h3>
                 <input
                   type="text"
-                  id="cname"
+                  id="messageInput"
                   name="cardname"
-                  placeholder="Happy Birthday!"
+                  placeholder=""
                 />
               </div>
             </div>
