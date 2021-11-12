@@ -73,6 +73,20 @@
         font-size: 24px;
       }
 
+      /* Container holding the image and the text */
+      .container {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      /* Bottom right text */
+      .bottom-right {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+      }
+
       .btn {
         background-color: #04aa6d;
         color: white;
@@ -233,14 +247,17 @@
               <div class="col-50">
                 <h3 id="select">Please select a card</h3>
                 <div class="icon-container">
-                  <img
-                    onclick="selectPicture('pic#0')"
-                    id="pic#0"
-                    style="border: 1px solid #000000"
-                    height="175px"
-                    width="175px"
-                    src=""
-                  />
+                  <div class="container">
+                    <img
+                      onclick="selectPicture('pic#0')"
+                      id="pic#0"
+                      style="border: 1px solid #000000"
+                      height="175px"
+                      width="175px"
+                      src=""
+                    />
+                    <div class="bottom-right">Thank you Test</div>
+                  </div>
 
                   <img
                     onclick="selectPicture('pic#1')"
