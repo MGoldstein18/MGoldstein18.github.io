@@ -125,11 +125,10 @@
         number = urlParams.get('number');
         occasion = urlParams.get('occasion');
         language = urlParams.get('language');
-        console.log('occasion', occasion);
-        console.log('number', number);
+
         if(language === 'h'){
-          document.getElementById('select') = 'Please select a card';
-          document.getElementById('write') = 'Please write a message';
+          document.getElementById('select') = 'נא לבחור כרטיס';
+          document.getElementById('write') = 'נא לרשום מסר';
           document.getElementById('happy') = 'When you are happy with your card and message, please proceed to the payment.';
           document.getElementById('after') = 'After payment, you will be redirected back to WhatsApp where you will receive the gift that can be sent.';
           document.getElementById('payment') = 'Payment';
