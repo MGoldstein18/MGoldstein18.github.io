@@ -207,6 +207,7 @@
       }
 
       async function postCall(text) {
+        console.log('called')
         const url =
           'https://99h7m0xonl.execute-api.eu-central-1.amazonaws.com/dev/flow/message';
         const data = {
@@ -249,7 +250,7 @@
     <h2>Customize your Gift</h2>
     <div class="row">
       <div class="col-75">
-        <div class="container">
+        < class="container">
           <form action="/action_page.php">
             <div class="row">
               <div class="col-50">
@@ -310,7 +311,6 @@
                 <p>After you have paid in cash at one of our payment partners, you will receive your card via WhatsApp.</p>
               </p>
             </p>
-            <button class="btn" id="confirmButton" onclick="postCall('sendBarcode')">Confirm</button>
             <p>
               <i id="after"
                 >After payment, you will be redirected back to WhatsApp where
@@ -318,6 +318,7 @@
               >
             </p>
           </form>
+          <a href="https://wa.me/27746250000"></a><button class="btn" id="confirmButton" onclick="postCall('sendBarcode')">Confirm</button></a>
         </div>
       </div>
     </div>
