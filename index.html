@@ -128,10 +128,11 @@
         number = urlParams.get('number');
         occasion = urlParams.get('occasion');
         paymentMethod = urlParams.get('paymentMethod');
+        console.log(paymentMethod)
         cash = paymentMethod === 'cash';
-        gifting = urlParams.get('gifting') === 'true';
+        notGifting = urlParams.get('gifting') !== 'true';
 
-        if (cash) {
+        if (cash === true) {
           document.getElementById('payment').style = 'display: none';
           document.getElementById('paymentDiv').style = 'display: none';
           document.getElementById('happy').style = 'display: none';
@@ -139,13 +140,14 @@
         }
 
 
-        if (!cash) {
+        if (cash === false) {
           document.getElementById('cashInstructions').style = 'display: none';
           document.getElementById('confirmButton').style = 'display: none';
         }
 
-        if(!gifting){
-          document.getElementById('personalization').style = 'display: none';
+        if(!notGifting){
+          document.getElementById('customizeHeading').style = 'display: none';
+          document.getElementById('cardRow').style = 'display: none';
         }
 
         if (occasion === 'birthday') {
@@ -218,7 +220,7 @@
           'https://bnyjivt6wh.execute-api.eu-central-1.amazonaws.com/dev/flow/message';
 
         let sendImage
-        if(gifting === true){
+        if(notGifting !== true){
           sendImage = picUrl;
           console.log('gifting')
           console.log(sendImage)
@@ -267,8 +269,8 @@
     </script>
   </head>
   <body onload="loadFunction()">
-    <div id = 'personalization'><h2>Customize your Gift</h2>
-    <div class="row">
+    <h2 id = "customizeHeading">Customize your Gift</h2>
+    <div id="cardRow" class="row">
       <div class="col-75">
         <div class="container">
           <form action="/action_page.php">
