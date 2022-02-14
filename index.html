@@ -131,6 +131,7 @@
         console.log(paymentMethod)
         cash = paymentMethod === 'cash';
         notGifting = urlParams.get('gifting') !== 'true';
+        console.log(notGifting)
 
         if (cash === true) {
           document.getElementById('payment').style = 'display: none';
@@ -145,7 +146,10 @@
           document.getElementById('confirmButton').style = 'display: none';
         }
 
-        if(!notGifting){
+        console.log(notGifting)
+
+        if(notGifting)
+        {
           document.getElementById('customizeHeading').style = 'display: none';
           document.getElementById('cardRow').style = 'display: none';
         }
