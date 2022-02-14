@@ -129,7 +129,7 @@
         occasion = urlParams.get('occasion');
         paymentMethod = urlParams.get('paymentMethod');
         cash = paymentMethod === 'cash';
-        gifting = urlParams.get('gifting');
+        gifting = urlParams.get('gifting') === 'true';
 
         if (cash) {
           document.getElementById('payment').style = 'display: none';
@@ -144,7 +144,7 @@
           document.getElementById('confirmButton').style = 'display: none';
         }
 
-        if(gifting !== 'true'){
+        if(!gifting){
           document.getElementById('personalization').style = 'display: none';
         }
 
@@ -217,7 +217,7 @@
         const url =
           'https://bnyjivt6wh.execute-api.eu-central-1.amazonaws.com/dev/flow/message';
 
-          const sendImage = gifting === 'true' ? picUrl : '';
+        const sendImage = gifting === 'true' ? picUrl : '';
           
         const data = {
           reference: '1514883137',
