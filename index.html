@@ -144,7 +144,7 @@
           document.getElementById('confirmButton').style = 'display: none';
         }
 
-        if(gifting !== true){
+        if(gifting !== 'true'){
           document.getElementById('personalization').style = 'display: none';
         }
 
@@ -216,6 +216,7 @@
         console.log('called')
         const url =
           'https://bnyjivt6wh.execute-api.eu-central-1.amazonaws.com/dev/flow/message';
+          
         const data = {
           reference: '1514883137',
           messageContext: 'gBGGJ3ImRHAPAglDLuZWS201DR8',
@@ -223,7 +224,7 @@
           to: { number: '0027746250000' },
           message: {
             text: text,
-            picUrl,
+            picUrl = gifting === true ? picUrl : '',
             custom: {}
           },
           custom: {},
