@@ -217,7 +217,18 @@
         const url =
           'https://bnyjivt6wh.execute-api.eu-central-1.amazonaws.com/dev/flow/message';
 
-        const sendImage = gifting === 'true' ? picUrl : '';
+        let sendImage
+        if(gifting === true){
+          sendImage = picUrl;
+          console.log('gifting')
+          console.log(sendImage)
+        } else {
+          sendImage = ''
+          console.log('not gifting');
+          console.log(sendImage)
+        }
+
+        console.log(sendImage)
           
         const data = {
           reference: '1514883137',
@@ -385,11 +396,9 @@
               </div>
             </div>
           </form>
-          <a href="https://wa.me/27746250000"
-            ><button class="btn" id="myButton" onclick="postCall('e-paid')">
+          <button class="btn" id="myButton" onclick="postCall('e-paid')">
               Pay Now
-            </button></a
-          >
+            </button>
         </div>
       </div>
       <div class="col-25">
