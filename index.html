@@ -216,6 +216,8 @@
         console.log('called')
         const url =
           'https://bnyjivt6wh.execute-api.eu-central-1.amazonaws.com/dev/flow/message';
+
+          const sendImage = gifting === 'true' ? picUrl : '';
           
         const data = {
           reference: '1514883137',
@@ -224,7 +226,7 @@
           to: { number: '0027746250000' },
           message: {
             text: text,
-            picUrl = gifting === true ? picUrl : '',
+            picUrl: sendImage,
             custom: {}
           },
           custom: {},
